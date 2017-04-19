@@ -1,4 +1,4 @@
-var log = (function(){
+module.exports = function(){
     //Private variables
     let showLogging = true;
     //Public
@@ -20,4 +20,4 @@ var log = (function(){
             }
         }
     }
-}());
+};
