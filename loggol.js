@@ -6,6 +6,9 @@ var log = (function(){
         log: function(value){
             showLogging ? console.log("LOGGOL>>> " + value) : return;
         },
+        log: function(descriptor,value){
+            showLogging ? console.log("LOGGOL>>>" + descriptor + ">>>" + value) : return;
+        },
         LoggingEnabled: function(loggingStatus){
             if(typeof(loggingStatus) != bool){
                 console.log("LOGGOL_ERROR>>> LoggingEnabled needs to be called with a bool not a " + typeof(loggingStatus));
