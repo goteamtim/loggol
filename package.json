@@ -1,0 +1,23 @@
+{
+  "name": "loggol",
+  "version": "1.0.0",
+  "description": "Custom logger that you can control throughout your project.",
+  "main": "loggol.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goteamtim/loggol.git"
+  },
+  "keywords": [
+    "log",
+    "console"
+  ],
+  "author": "Tim Harshman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goteamtim/loggol/issues"
+  },
+  "homepage": "https://github.com/goteamtim/loggol#readme"
+}
