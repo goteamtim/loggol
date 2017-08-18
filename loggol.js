@@ -1,6 +1,6 @@
 var log = (function(){
     //Private variables
-    let loggingLevel = true;
+    let loggingLevel = 0;
     //Public
     return {
         /**
@@ -40,6 +40,9 @@ var log = (function(){
                     console.log("LOGGOL_STATUS>>> logging status: " + loggingStatus + "\n Not a valid status.\nLOGGOL_STATUS>>>");
                     break;
             }
+        },
+        setup: function(status){
+            //this.loggingStatus
         },
         LEVELS:{
             ALL: 0,
