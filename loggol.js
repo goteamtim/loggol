@@ -3,7 +3,6 @@ module.exports = function(){
     let loggingLevel = 0;
     //Public
     return {
-
         /**
          * Log function that logs a value.
          * @constructor
@@ -11,7 +10,7 @@ module.exports = function(){
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
         log: function(value,logLevel){
-            loggingLevel == logLevel ? console.log("LOGGOL>>> ", value) : return;
+            loggingLevel == logLevel ? console.log("LOGGOL>>> ", value) : 1;
         },
         /**
          * Log function with value and descriptor option.
@@ -21,7 +20,7 @@ module.exports = function(){
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
         log: function(value,descriptor,logLevel){
-            loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>", value) : return;
+            loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>", value) : 1;
         },
         /**
          * Get the status of the log level.
