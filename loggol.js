@@ -4,14 +4,14 @@ module.exports = function(){
     //Public
     return {
         log: function(value){
-            showLogging ? console.log("LOGGOL>>> " + value) : return;
+            showLogging ? console.log("LOGGOL>>> " + value) : 1;
         },
-        LoggingEnabled: function(loggingStatus){
-            if(typeof(loggingStatus) != bool){
-                console.log("LOGGOL_ERROR>>> LoggingEnabled needs to be called with a bool not a " + typeof(loggingStatus));
+        setLogging: function(status){
+            if(typeof(status) != bool){
+                console.log("LOGGOL_ERROR>>> LoggingEnabled needs to be called with a bool not a " + typeof(status));
                 return;
         }
-            if(loggingStatus){
+            if(status){
                 showLogging = true;
                 console.log("LOGGOL_STATUS>>> Logging Enabled <<<SUTATS_LOGGOL");
             }else{
@@ -19,5 +19,5 @@ module.exports = function(){
                 console.log("LOGGOL_STATUS>>> Logging Disabled <<<SUTATS_LOGGOL");
             }
         }
-    }
+    };
 };
