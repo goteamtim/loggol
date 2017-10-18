@@ -1,7 +1,7 @@
 {
   "name": "loggol",
   "version": "1.0.0",
-  "description": "Logging function with more control.",
+  "description": "Custom logger that you can control throughout your project.",
   "main": "loggol.js",
   "scripts": {
     "test": "mocha"
