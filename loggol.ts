@@ -21,7 +21,7 @@ class loggol {
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
         log(value,descriptor,logLevel): void{
-            this.loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>", value) : 1;
+            this.loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>\n", value) : 1;
         }
         /**
          * Get the status of the log level.
@@ -30,10 +30,11 @@ class loggol {
          * @param {string} descriptor - Description of the data being output.
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
-        LoggingStatus(loggingStatus): void{
+        setLoggingStatus(loggingStatus): void{
             switch (loggingStatus) {
                 case 0:
                 case 1:
+                    this.loggingLevel = loggingStatus;
                     console.log("LOGGOL_STATUS>>> Logging level " + Object.keys(this.LEVELS)[loggingStatus] + " enabled. <<<SUTATS_LOGGOL");
                     break;
             
@@ -46,6 +47,8 @@ class loggol {
         setup(status): void{
             //this.loggingStatus
         }
+
+
         
         LEVELS:{
             ALL: 0,
