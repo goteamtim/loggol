@@ -1,17 +1,18 @@
-module.exports = function(){
+class loggol {
     //Private variables
-    let loggingLevel = 0;
+    private loggingLevel = 0;
     //Public
-    return {
         /**
          * Log function that logs a value.
          * @constructor
          * @param {Object} value - The value to display in the console.
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
-        log: function(value,logLevel){
-            loggingLevel == logLevel ? console.log("LOGGOL>>> ", value) : 1;
-        },
+        log( value, logLevel ) :void {
+            if(this.loggingLevel == logLevel){
+                console.log("LOGGOL>>> ", value) 
+            }else{  };
+        }
         /**
          * Log function with value and descriptor option.
          * @constructor
@@ -19,9 +20,9 @@ module.exports = function(){
          * @param {string} descriptor - Description of the data being output.
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
-        log: function(value,descriptor,logLevel){
-            loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>", value) : 1;
-        },
+        log(value,descriptor,logLevel): void{
+            this.loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>", value) : 1;
+        }
         /**
          * Get the status of the log level.
          * @function
@@ -29,7 +30,7 @@ module.exports = function(){
          * @param {string} descriptor - Description of the data being output.
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
-        LoggingStatus: function(loggingStatus){
+        LoggingStatus(loggingStatus): void{
             switch (loggingStatus) {
                 case 0:
                 case 1:
@@ -40,13 +41,16 @@ module.exports = function(){
                     console.log("LOGGOL_STATUS>>> logging status: " + loggingStatus + "\n Not a valid status.\nLOGGOL_STATUS>>>");
                     break;
             }
-        },
-        setup: function(status){
+        }
+
+        setup(status): void{
             //this.loggingStatus
-        },
+        }
+        
         LEVELS:{
             ALL: 0,
             NETWORK: 1 
         }
-    };
 };
+
+export = loggol;
