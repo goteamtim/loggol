@@ -9,19 +9,10 @@ class loggol {
          * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
          */
         log( value, logLevel ) :void {
+            logLevel == undefined ? logLevel = 0: null;
             if(this.loggingLevel == logLevel){
                 console.log("LOGGOL>>> ", value) 
             }else{  };
-        }
-        /**
-         * Log function with value and descriptor option.
-         * @constructor
-         * @param {Object} value - The value to display in the console.
-         * @param {string} descriptor - Description of the data being output.
-         * @param {number} logLevel - The logging threshold.  If the logging level is set to logLevel the function will execute.
-         */
-        log(value,descriptor,logLevel): void{
-            this.loggingLevel == logLevel ? console.log("LOGGOL>>>" + descriptor + ">>>\n", value) : 1;
         }
         /**
          * Get the status of the log level.
