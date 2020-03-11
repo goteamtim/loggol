@@ -1,6 +1,6 @@
 {
   "name": "loggol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom logger that you can control throughout your project.",
   "main": "loggol.js",
   "scripts": {
